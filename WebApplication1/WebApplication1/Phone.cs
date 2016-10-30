@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1
+namespace BigFamilyWeb
 {
     using System;
     using System.Collections.Generic;

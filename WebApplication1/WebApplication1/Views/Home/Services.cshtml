@@ -12,22 +12,22 @@
     <nav class="navigation">
         <ul class="menu active">
             <li>
-                <a href="index.html">Главная</a>
+                @Html.ActionLink("Главная", "Index", "Home")
             </li>
             <li>
-                <a href="about.html">О нас</a>
+                @Html.ActionLink("О нас", "About", "Home")
             </li>
             <li>
-                <a href="services.html">Услуги</a>
+                @Html.ActionLink("Услуги", "Services", "Home")
             </li>
             <li>
-                <a href="news.html">Новости</a>
+                @Html.ActionLink("Новости", "News", "Home")
             </li>
             <li>
-                <a href="partners.html">Партнеры</a>
+                @Html.ActionLink("Партнеры", "Partners", "Home")
             </li>
             <li class="click">
-                <a href="#contacts">Контакты</a>
+                @Html.ActionLink("Контакты", "Contacts", "Home")
             </li>
         </ul>
     </nav>
@@ -62,44 +62,5 @@
 <section class="services_middle">
 
     @Html.Partial("ServiceList", Model)
-    <div class="sector" style="background: url('/Content/images/bar.jpg');background-size:cover;">
-        <img src="/Content/images/lamp_green_.png" alt="green lamp" class="sector_lamp">
-        <h2>Бар</h2>
-        <p>
-            Планировка помещений,
-            советы по интерьеру
-        </p>
-        <button>Подробнее</button>
-    </div>
-
-    <div class="sector" style="background: url('/Content/images/kitchen.jpg');background-size:cover;">
-        <img src="/Content/images/lamp_yellow_.png" alt="yellow lamp" class="sector_lamp">
-        <h2>Кухня</h2>
-        <p>
-            Планировка помещений,
-            советы по интерьеру
-        </p>
-        <button>Подробнее</button>
-    </div>
-
-    <div class="sector" style="background: url('/Content/images/lawyer.jpg');background-size:cover;">
-        <img src="/Content/images/lamp_green_.png" alt="green lamp" class="sector_lamp">
-        <h2>Юридические услуги</h2>
-        <p>
-            Планировка помещений,
-            советы по интерьеру
-        </p>
-        <button>Подробнее</button>
-    </div>
-
-
-    <div class="sector" style="background: url('/Content/images/art.jpg');background-size:cover;">
-        <img src="/Content/images/lamp_red_.png" alt="red lamp" class="sector_lamp">
-        <h2>Арт-директор</h2>
-        <p>
-            Планировка помещений,
-            советы по интерьеру
-        </p>
-        <button>Подробнее</button>
-    </div>
+    
 </section>

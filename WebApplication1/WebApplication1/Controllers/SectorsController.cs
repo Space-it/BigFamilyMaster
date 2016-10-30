@@ -6,13 +6,18 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using WebApplication1;
+using BigFamilyWeb;
 
-namespace WebApplication1.Controllers
+namespace BigFamilyWeb.Controllers
 {
     public class SectorsController : Controller
     {
         private familydbEntities db = new familydbEntities();
+        private string Message;
+        public ActionResult Error()
+        {
+            return View();
+        }
 
         // GET: Sectors
         public ActionResult Index()
@@ -48,26 +53,46 @@ namespace WebApplication1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Name,Description,ImageURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload)
         {
-            // получаем имя файла
-            string fileName = System.IO.Path.GetFileName(MinUpload.FileName);
-            // сохраняем файл в папку Files в проекте
-            MinUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\images\\" + fileName);
+            string fileName = string.Empty;
+            string fileName1 = string.Empty;
+            string fileName2 = string.Empty;
+            if (MinUpload != null)
+            {
+                if (System.IO.File.Exists(Server.MapPath("~/" + sector.MinImageUrl)))
+                    System.IO.File.Delete(Server.MapPath("~/" + sector.MinImageUrl));
+                // получаем имя файла
+                fileName = System.IO.Path.GetFileName(MinUpload.FileName);
+                // сохраняем файл в папку Files в проекте
+                MinUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorMinImages\\" + fileName);
+            }
+            if (PriceUpload != null)
+            {
+                if (System.IO.File.Exists(Server.MapPath("~/" + sector.PriceURL)))
+                    System.IO.File.Delete(Server.MapPath("~/" + sector.PriceURL));
 
-            // получаем имя файла
-            string fileName1 = System.IO.Path.GetFileName(PriceUpload.FileName);
-            // сохраняем файл в папку Files в проекте
-            PriceUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\prices\\" + fileName1);
+                // получаем имя файла
+                fileName1 = System.IO.Path.GetFileName(PriceUpload.FileName);
+                // сохраняем файл в папку Files в проекте
+                PriceUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\prices\\" + fileName1);
+            }
+            if (ImageUpload != null)
+            {
+                if (System.IO.File.Exists(Server.MapPath("~/" + sector.ImageURL)))
+                    System.IO.File.Delete(Server.MapPath("~/" + sector.ImageURL));
+                // получаем имя файла
+                fileName2 = System.IO.Path.GetFileName(ImageUpload.FileName);
+                // сохраняем файл в папку Files в проекте
+                ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorBigImages\\" + fileName2);
+            }
 
-            // получаем имя файла
-            string fileName2 = System.IO.Path.GetFileName(ImageUpload.FileName);
-            // сохраняем файл в папку Files в проекте
-            ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\images\\" + fileName2);
-
+            sector.MinImageUrl = "/Content/sectorMinImages/" + fileName;
+            sector.PriceURL = "/Content/prices/" + fileName1;
+            sector.ImageURL = "/Content/sectorBigImages/" + fileName2;
             if (ModelState.IsValid)
             {
-                sector.MinImageUrl = "/Content/images/" + fileName;
+                sector.MinImageUrl = "/Content/sectorMinImages/" + fileName;
                 sector.PriceURL = "/Content/prices/" + fileName1;
-                sector.ImageURL = "/Content/images/" + fileName2;
+                sector.ImageURL = "/Content/sectorBigImages/" + fileName2;
                 db.Sectors.Add(sector);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -100,30 +125,34 @@ namespace WebApplication1.Controllers
         {
             if (MinUpload != null)
             {
-                System.IO.File.Delete(Server.MapPath("~/" + sector.MinImageUrl));
+                if (System.IO.File.Exists(Server.MapPath("~/" + sector.MinImageUrl)))
+                    System.IO.File.Delete(Server.MapPath("~/" + sector.MinImageUrl));
+
                 // получаем имя файла
                 string fileName = System.IO.Path.GetFileName(MinUpload.FileName);
                 // сохраняем файл в папку Files в проекте
-                MinUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\images\\" + fileName);
-                sector.MinImageUrl = "/Content/images" + fileName;
+                MinUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorMinImages\\" + fileName);
+                sector.MinImageUrl = "/Content/sectorMinImages/" + fileName;
             }
             if (ImageUpload != null)
             {
-                System.IO.File.Delete(Server.MapPath("~/" + sector.ImageURL));
+                if (System.IO.File.Exists(Server.MapPath("~/" + sector.ImageURL)))
+                    System.IO.File.Delete(Server.MapPath("~/" + sector.ImageURL));
                 // получаем имя файла
                 string fileName = System.IO.Path.GetFileName(ImageUpload.FileName);
                 // сохраняем файл в папку Files в проекте
-                ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\images\\" + fileName);
-                sector.ImageURL = "/Content/images" + fileName;
+                ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorBigImages\\" + fileName);
+                sector.ImageURL = "/Content/sectorBigImages/" + fileName;
             }
             if (PriceUpload != null)
             {
-                System.IO.File.Delete(Server.MapPath("~/" + sector.PriceURL));
+                if (System.IO.File.Exists(Server.MapPath("~/" + sector.PriceURL)))
+                    System.IO.File.Delete(Server.MapPath("~/" + sector.PriceURL));
                 // получаем имя файла
                 string fileName = System.IO.Path.GetFileName(PriceUpload.FileName);
                 // сохраняем файл в папку Files в проекте
                 ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\prices\\" + fileName);
-                sector.ImageURL = "/Content/prices" + fileName;
+                sector.ImageURL = "/Content/prices/" + fileName;
             }
             if (ModelState.IsValid)
             {

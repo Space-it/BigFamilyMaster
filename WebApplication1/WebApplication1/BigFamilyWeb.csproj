@@ -133,6 +133,7 @@
     <Compile Include="Contact.cs">
       <DependentUpon>familydb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\EmailsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -164,6 +165,7 @@
     <Compile Include="Member.cs">
       <DependentUpon>familydb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="News.cs">
       <DependentUpon>familydb.tt</DependentUpon>
     </Compile>
@@ -240,6 +242,8 @@
     <Content Include="Content\fonts\RobotoCondensedRegular\RobotoCondensedRegular.eot" />
     <Content Include="Content\fonts\RobotoCondensedRegular\RobotoCondensedRegular.ttf" />
     <Content Include="Content\fonts\RobotoCondensedRegular\RobotoCondensedRegular.woff" />
+    <None Include="Properties\PublishProfiles\bigfamily - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\bigfamily - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -268,7 +272,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Emails\Create.cshtml" />
     <Content Include="Views\Emails\Delete.cshtml" />
@@ -305,11 +309,15 @@
     <Content Include="Views\Contacts\Details.cshtml" />
     <Content Include="Views\Contacts\Edit.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\Sectors\Error.cshtml" />
+    <Content Include="Views\Home\Partners.cshtml" />
+    <Content Include="Views\Home\News.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\prices\" />
-    <Folder Include="Models\" />
+    <Folder Include="Content\sectorBigImages\" />
+    <Folder Include="Content\sectorMinImages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

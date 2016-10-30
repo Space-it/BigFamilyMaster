@@ -1,6 +1,7 @@
 ﻿@{
     Layout = "";
 }
+@model BigFamilyWeb.Models.LoginModel
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,13 +14,16 @@
 
     <div id="login-form">
         <h1>АВТОРИЗАЦИЯ</h1>
+@using (Html.BeginForm("Index", "Admin", FormMethod.Post))
+{
         <fieldset>
             <form action="javascript:void(0);" method="get">
-                <input type="email" required value="Логин" onBlur="if(this.value=='')this.value='Логин'" onFocus="if(this.value=='Логин')this.value='' ">
-                <input type="password" required value="Пароль" onBlur="if(this.value=='')this.value='Пароль'" onFocus="if(this.value=='Пароль')this.value='' ">
+                @Html.EditorFor(model => model.Username, new { @class = "", @required = "true",@placeholder="Логин"})
+                @Html.PasswordFor(model => model.Password, new { @class = "", @required = "true", @placeholder = "Пароль" })
                 <input type="submit" value="ВОЙТИ">
             </form>
         </fieldset>
+}
     </div>
 </body>
 </html>

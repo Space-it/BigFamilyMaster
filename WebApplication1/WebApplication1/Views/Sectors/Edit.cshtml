@@ -1,4 +1,4 @@
-﻿@model WebApplication1.Sector
+﻿@model BigFamilyWeb.Sector
 
 @{
     ViewBag.Title = "Edit";
@@ -7,7 +7,7 @@
 
 <h2>Edit</h2>
 
-@using (Html.BeginForm("", "Sectors", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Edit", "Sectors", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     

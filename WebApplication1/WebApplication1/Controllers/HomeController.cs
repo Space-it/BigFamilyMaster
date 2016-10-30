@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WebApplication1.Controllers
+namespace BigFamilyWeb.Controllers
 {
     public class HomeController : Controller
     {
@@ -14,7 +14,7 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public ActionResult Contact()
+        public ActionResult Contacts()
         {
             return View();
         }
@@ -27,5 +27,14 @@ namespace WebApplication1.Controllers
 
             return View(db.Sectors.ToList());
         }
+        public ActionResult News()
+        {
+            return View();
+        }
+        public ActionResult Partners()
+        {
+            return View();
+        }
+
     }
 }
