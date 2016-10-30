@@ -1,0 +1,16 @@
+﻿
+@model IEnumerable<Sector>
+
+<!--/Content/images/lamp_yellow.png-->
+@foreach (var item in Model)
+{
+    <div class="sector" style="background: url('@Html.DisplayFor(Modelitem => item.MinImageUrl)');background-size:cover;">
+        <img src="/Content/images/lamp_@Html.DisplayFor(Modelitem => item.LampColor)_.png" alt="lamp_@Html.DisplayFor(Modelitem => item.LampColor)" class="sector_lamp">
+        <h2>@Html.DisplayFor(Modelitem => item.MinTitle)</h2>
+        <p>
+            @Html.DisplayFor(Modelitem => item.MinKeywords)
+        </p>
+        <button>Подробнее</button>
+    </div>
+
+}

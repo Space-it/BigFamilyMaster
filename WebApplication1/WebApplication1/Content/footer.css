@@ -1,0 +1,348 @@
+@font-face {
+  font-family: "RobotoCondensedRegular";
+  src: url("../fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot");
+  src: url("../fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensedRegular/RobotoCondensedRegular.woff") format("woff"), url("../fonts/RobotoCondensedRegular/RobotoCondensedRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 21, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 34, ../sass/_grids.scss */
+footer {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("/Content/images/footer_bg.jpg") no-repeat;
+  background-size: cover;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+footer:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 40, ../sass/_grids.scss */
+.communications {
+  margin-left: 5.04587%;
+  width: 24.31193%;
+  float: left;
+  margin-right: 0.91743%;
+  font-family: "RobotoCondensedRegular";
+  padding-bottom: 20px;
+}
+
+/* line 47, ../sass/_grids.scss */
+.communications p {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+/* line 52, ../sass/_grids.scss */
+.communications form {
+  /* Firefox 19+ */
+  /* Firefox 18- */
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+/* line 53, ../sass/_grids.scss */
+.communications form input::-webkit-input-placeholder {
+  color: #ceaf20;
+}
+/* line 54, ../sass/_grids.scss */
+.communications form input::-moz-placeholder {
+  color: #ceaf20;
+}
+/* line 55, ../sass/_grids.scss */
+.communications form input::-moz-placeholder {
+  color: #ceaf20;
+}
+/* line 56, ../sass/_grids.scss */
+.communications form input::-ms-input-placeholder {
+  color: #ceaf20;
+}
+/* line 57, ../sass/_grids.scss */
+.communications form textarea::-webkit-input-placeholder {
+  color: #ceaf20;
+}
+/* line 58, ../sass/_grids.scss */
+.communications form textarea::-moz-placeholder {
+  color: #ceaf20;
+}
+/* line 59, ../sass/_grids.scss */
+.communications form textarea::-moz-placeholder {
+  color: #ceaf20;
+}
+/* line 60, ../sass/_grids.scss */
+.communications form textarea::-ms-input-placeholder {
+  color: #ceaf20;
+}
+
+/* line 63, ../sass/_grids.scss */
+.communications form input {
+  background: #2b2b2b;
+  border: none;
+  border-radius: 7px;
+  padding-left: 10px;
+  color: #ceaf20;
+}
+
+/* line 71, ../sass/_grids.scss */
+.communications form .min_input {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+/* line 77, ../sass/_grids.scss */
+.communications form .message {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  height: 150px;
+  margin-bottom: 10px;
+  background: #2b2b2b;
+  border: none;
+  border-radius: 7px;
+  padding-left: 10px;
+  color: #ceaf20;
+}
+
+/* line 88, ../sass/_grids.scss */
+.communications form .comm_button {
+  width: 41.88679%;
+  float: left;
+  margin-right: 3.77358%;
+  height: 35px;
+  border: 2px solid #ceaf20;
+  border-radius: 10px;
+}
+
+/* line 95, ../sass/_grids.scss */
+#contacts {
+  width: 24.31193%;
+  float: left;
+  margin-right: 0.91743%;
+  margin-left: 3.02752%;
+  font-family: "RobotoCondensedRegular";
+  padding-bottom: 20px;
+}
+
+/* line 101, ../sass/_grids.scss */
+#contacts .cont_name {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+/* line 105, ../sass/_grids.scss */
+#contacts div {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+
+/* line 109, ../sass/_grids.scss */
+#contacts div img {
+  width: 16.98113%;
+  float: left;
+  margin-right: 3.77358%;
+}
+
+/* line 112, ../sass/_grids.scss */
+#contacts div p {
+  color: #fff;
+  font-size: 1.1em;
+}
+
+/* line 116, ../sass/_grids.scss */
+#contacts div p a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 121, ../sass/_grids.scss */
+.footer_menu {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  color: #fff;
+  background: #232323;
+  height: 45px;
+  padding-left: 20px;
+  font-family: "RobotoCondensedRegular";
+}
+
+/* line 129, ../sass/_grids.scss */
+.footer_menu .consultation {
+  margin-left: 5.04587%;
+  width: 9.17431%;
+  float: left;
+  margin-right: 0.91743%;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+/* line 136, ../sass/_grids.scss */
+.footer_menu ul {
+  width: 49.54128%;
+  float: right;
+  margin-right: 0;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+/* line 142, ../sass/_grids.scss */
+.footer_menu ul li {
+  display: inline;
+  padding-right: 25px;
+}
+
+/* line 147, ../sass/_grids.scss */
+.footer_menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 1160px) {
+  /* line 156, ../sass/_grids.scss */
+  .communications {
+    width: 29.3578%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 160, ../sass/_grids.scss */
+  .communications form .min_input {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 164, ../sass/_grids.scss */
+  .communications form .message {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 168, ../sass/_grids.scss */
+  .communications form .comm_button {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 172, ../sass/_grids.scss */
+  #contacts div {
+    margin-bottom: 15px;
+  }
+
+  /* line 176, ../sass/_grids.scss */
+  #contacts div p {
+    font-size: 1em;
+    margin-top: 10px;
+  }
+
+  /* line 181, ../sass/_grids.scss */
+  .footer_menu ul {
+    width: 59.63303%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 980px) {
+  /* line 195, ../sass/_grids.scss */
+  .footer_menu ul {
+    width: 69.72477%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  /* line 206, ../sass/_grids.scss */
+  .communications {
+    margin-left: 5.04587%;
+    width: 89.90826%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 211, ../sass/_grids.scss */
+  .communications p {
+    font-size: 1.5em;
+  }
+
+  /* line 216, ../sass/_grids.scss */
+  #contacts {
+    width: 89.90826%;
+    float: left;
+    margin-right: 0.91743%;
+    margin-left: 5.04587%;
+  }
+
+  /* line 221, ../sass/_grids.scss */
+  #contacts div {
+    width: 55.10204%;
+    float: left;
+    margin-right: 1.02041%;
+  }
+
+  /* line 226, ../sass/_grids.scss */
+  .footer_menu {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 230, ../sass/_grids.scss */
+  .footer_menu .consultation {
+    margin-left: 2.01835%;
+    width: 9.17431%;
+    float: left;
+    margin-right: 0.91743%;
+    font-size: 14px;
+  }
+
+  /* line 236, ../sass/_grids.scss */
+  .footer_menu ul {
+    width: 74.77064%;
+    float: right;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  /* line 243, ../sass/_grids.scss */
+  .footer_menu ul li a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 250, ../sass/_grids.scss */
+  .footer_menu ul {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 256, ../sass/_grids.scss */
+  #contacts div {
+    width: 77.55102%;
+    float: left;
+    margin-right: 1.02041%;
+  }
+}

@@ -1,0 +1,99 @@
+﻿@model WebApplication1.Sector
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Sector</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageURL)
+            <img src="@Model.ImageURL" width="100" height="100" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contacts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contacts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinImageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinImageUrl)
+            <img src="@Model.MinImageUrl" width="100" height="100" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinKeywords)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinKeywords)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LampColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LampColor)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

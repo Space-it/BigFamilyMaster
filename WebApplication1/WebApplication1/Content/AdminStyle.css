@@ -1,0 +1,46 @@
+﻿/* Header Main page*/
+.flex-container {
+    width: 100%;
+}
+
+
+    .flex-container .flex-container-center {
+        margin: 0 auto;
+        width: 70%;
+    }
+        .flex-container .top-header-bg {
+        background: url('../Images/main-black.jpg') no-repeat 0 100%;
+        background-size: cover;
+        background-position: center;
+        padding-top: 20px;
+        height: 350px;
+    }
+    .flex-container .flex-container-center .top-navi .top-navi-list{
+        list-style: none;
+        display:flex;
+    }
+      .flex-container .flex-container-center .top-navi .top-navi-list>li{
+          display:inline-block;
+          padding:10px;
+          margin:0;
+          background-color:black;
+    }
+      .flex-container .flex-container-center .top-navi .top-navi-list>li a{
+          color:white;
+          text-decoration: none;
+    }
+       .flex-container .flex-container-center .top-navi .top-navi-list>li a:visited{
+          text-decoration: none;
+          color:white;
+    }
+        .flex-container .flex-container-center .top-navi .top-navi-list>li a:active{
+          text-decoration: none;
+          color:white;
+    }
+
+
+      
+      .flex-container .flex-container-center .top-navi .top-navi-list>li:hover{
+
+    }
+      

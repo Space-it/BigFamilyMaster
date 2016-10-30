@@ -1,0 +1,93 @@
+﻿@model WebApplication1.Sector
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sector</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageURL)
+            <img src="@Model.ImageURL" width="100" height="100" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contacts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contacts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinImageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinImageUrl)
+            <img src="@Model.MinImageUrl" width="100" height="100" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinKeywords)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinKeywords)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LampColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LampColor)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SectorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

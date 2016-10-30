@@ -8,23 +8,24 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
+        private familydbEntities db = new familydbEntities();
+        // GET: Home
         public ActionResult Index()
         {
             return View();
         }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
+        }
+        public ActionResult About()
+        {
+            return View();
+        }
+        public ActionResult Services()
+        {
+
+            return View(db.Sectors.ToList());
         }
     }
 }
