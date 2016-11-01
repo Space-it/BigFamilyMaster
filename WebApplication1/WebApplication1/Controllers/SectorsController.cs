@@ -51,11 +51,12 @@ namespace BigFamilyWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name,Description,ImageURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload)
+        public ActionResult Create([Bind(Include = "Name,Description,ImageURL,ImaeMobileURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload, HttpPostedFileBase ImageMobileUpload)
         {
             string fileName = string.Empty;
             string fileName1 = string.Empty;
             string fileName2 = string.Empty;
+            string fileName3 = string.Empty;
             if (MinUpload != null)
             {
                 if (System.IO.File.Exists(Server.MapPath("~/" + sector.MinImageUrl)))
@@ -83,6 +84,15 @@ namespace BigFamilyWeb.Controllers
                 fileName2 = System.IO.Path.GetFileName(ImageUpload.FileName);
                 // сохраняем файл в папку Files в проекте
                 ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorBigImages\\" + fileName2);
+            }
+            if (ImageMobileUpload != null)
+            {
+                if (System.IO.File.Exists(Server.MapPath("~/" + sector.ImageMobileURL)))
+                    System.IO.File.Delete(Server.MapPath("~/" + sector.ImageMobileURL));
+                // получаем имя файла
+                fileName3 = System.IO.Path.GetFileName(ImageMobileUpload.FileName);
+                // сохраняем файл в папку Files в проекте
+                ImageMobileUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorBigImages\\" + fileName2);
             }
 
             sector.MinImageUrl = "/Content/sectorMinImages/" + fileName;
@@ -121,7 +131,7 @@ namespace BigFamilyWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Name,Description,ImageURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload)
+        public ActionResult Edit([Bind(Include = "Name,Description,ImageURL,ImaeMobileURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload, HttpPostedFileBase ImageMobileUpload)
         {
             if (MinUpload != null)
             {
@@ -142,6 +152,16 @@ namespace BigFamilyWeb.Controllers
                 string fileName = System.IO.Path.GetFileName(ImageUpload.FileName);
                 // сохраняем файл в папку Files в проекте
                 ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorBigImages\\" + fileName);
+                sector.ImageURL = "/Content/sectorBigImages/" + fileName;
+            }
+            if (ImageMobileUpload != null)
+            {
+                if (System.IO.File.Exists(Server.MapPath("~/" + sector.ImageMobileURL)))
+                    System.IO.File.Delete(Server.MapPath("~/" + sector.ImageMobileURL));
+                // получаем имя файла
+                string fileName = System.IO.Path.GetFileName(ImageMobileUpload.FileName);
+                // сохраняем файл в папку Files в проекте
+                ImageMobileUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorBigImages\\" + fileName);
                 sector.ImageURL = "/Content/sectorBigImages/" + fileName;
             }
             if (PriceUpload != null)
@@ -184,6 +204,14 @@ namespace BigFamilyWeb.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Sector sector = db.Sectors.Find(id);
+            if (System.IO.File.Exists(Server.MapPath("~/" + sector.MinImageUrl)))
+                System.IO.File.Delete(Server.MapPath("~/" + sector.MinImageUrl));
+            if (System.IO.File.Exists(Server.MapPath("~/" + sector.ImageURL)))
+                System.IO.File.Delete(Server.MapPath("~/" + sector.ImageURL));
+            if (System.IO.File.Exists(Server.MapPath("~/" + sector.ImageMobileURL)))
+                System.IO.File.Delete(Server.MapPath("~/" + sector.ImageMobileURL));
+            if (System.IO.File.Exists(Server.MapPath("~/" + sector.PriceURL)))
+                System.IO.File.Delete(Server.MapPath("~/" + sector.PriceURL));
             db.Sectors.Remove(sector);
             db.SaveChanges();
             return RedirectToAction("Index");

@@ -46,10 +46,24 @@ namespace BigFamilyWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "NewsId,Title,Content,ImageURL")] News news)
+        public ActionResult Create([Bind(Include = "NewsId,Title,Content,ImageURL,InsertDate")] News news, HttpPostedFileBase ImageUpload)
         {
+            string filename = "";
+            if (ImageUpload != null)
+            {
+                if (System.IO.File.Exists(Server.MapPath("~/" + news.ImageURL)))
+                    System.IO.File.Delete(Server.MapPath("~/" + news.ImageURL));
+                // получаем имя файла
+                filename = System.IO.Path.GetFileName(ImageUpload.FileName);
+                // сохраняем файл в папку Files в проекте
+                ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\news\\" + filename);
+                
+            }
+            news.InsertDate = DateTime.Now;
+            news.ImageURL = "/Content/news/" + filename;
             if (ModelState.IsValid)
             {
+                news.InsertDate = DateTime.Now;
                 db.News.Add(news);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -78,8 +92,22 @@ namespace BigFamilyWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "NewsId,Title,Content,ImageURL")] News news)
+        public ActionResult Edit([Bind(Include = "NewsId,Title,Content,ImageURL,InsertDate")] News news, HttpPostedFileBase ImageUpload)
         {
+            string filename = "";
+            if (ImageUpload != null)
+            {
+                if (System.IO.File.Exists(Server.MapPath("~/" + news.ImageURL)))
+                    System.IO.File.Delete(Server.MapPath("~/" + news.ImageURL));
+                // получаем имя файла
+                filename = System.IO.Path.GetFileName(ImageUpload.FileName);
+                // сохраняем файл в папку Files в проекте
+                ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\news\\" + filename);
+                
+            }
+            news.InsertDate = DateTime.Now;
+
+            news.ImageURL = "/Content/news/" + filename;
             if (ModelState.IsValid)
             {
                 db.Entry(news).State = EntityState.Modified;
@@ -110,6 +138,8 @@ namespace BigFamilyWeb.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             News news = db.News.Find(id);
+            if (System.IO.File.Exists(Server.MapPath("~/" + news.ImageURL)))
+                System.IO.File.Delete(Server.MapPath("~/" + news.ImageURL));
             db.News.Remove(news);
             db.SaveChanges();
             return RedirectToAction("Index");

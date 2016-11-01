@@ -44,6 +44,7 @@
           <Property Name="Title" Type="nvarchar" MaxLength="200" />
           <Property Name="Content" Type="nvarchar(max)" />
           <Property Name="ImageURL" Type="nvarchar(max)" />
+          <Property Name="InsertDate" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="Phone">
           <Key>
@@ -59,6 +60,7 @@
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
           <Property Name="ImageURL" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ImageMobileURL" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Contacts" Type="nvarchar" MaxLength="200" />
           <Property Name="SectorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PriceURL" Type="nvarchar(max)" />
@@ -87,6 +89,7 @@
           <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InsertDate" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
         <EntityType Name="Sector">
           <Key>
@@ -102,6 +105,7 @@
           <Property Name="MinTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="MinKeywords" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="LampColor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ImageMobileURL" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="familydbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="News" EntityType="Self.News" />
@@ -158,6 +162,7 @@
           <EntitySetMapping Name="News">
             <EntityTypeMapping TypeName="familydbModel.News">
               <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
                 <ScalarProperty Name="NewsId" ColumnName="NewsId" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Content" ColumnName="Content" />
@@ -168,6 +173,7 @@
           <EntitySetMapping Name="Sectors">
             <EntityTypeMapping TypeName="familydbModel.Sector">
               <MappingFragment StoreEntitySet="Sector">
+                <ScalarProperty Name="ImageMobileURL" ColumnName="ImageMobileURL" />
                 <ScalarProperty Name="LampColor" ColumnName="LampColor" />
                 <ScalarProperty Name="MinKeywords" ColumnName="MinKeywords" />
                 <ScalarProperty Name="MinTitle" ColumnName="MinTitle" />

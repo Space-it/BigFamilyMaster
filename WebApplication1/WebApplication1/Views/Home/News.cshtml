@@ -1,8 +1,52 @@
-﻿
+﻿@model IEnumerable<News>
 @{
     ViewBag.Title = "News";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@Styles.Render("~/Content/news_css")
+<header>
 
-<h1>В разработке...</h1>
+    <img src="images/mobile_menu.png" alt="Mobile Menu" class="toggle-nav" />
+
+    <nav class="navigation">
+        <ul class="menu active">
+            <li>
+                @Html.ActionLink("Главная", "Index", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("О нас", "About", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Услуги", "Services", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Новости", "News", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Партнеры", "Partners", "Home")
+            </li>
+            <li class="click">
+                @Html.ActionLink("Контакты", "Contacts", "Home")
+            </li>
+        </ul>
+    </nav>
+
+    <div class="socials">
+        <p>+38 (066) 355-84-12</p>
+        <img src="images/vk.png" alt="vk" class="vk_button">
+    </div>
+
+    <div class="news_description">
+        <h2>Новости</h2>
+        <p>Всегда будьте в курсе наших новостей</p>
+    </div>
+
+</header>
+
+
+<section class="news_section">
+
+    @Html.Partial("NewsList",Model);
+
+</section>
 

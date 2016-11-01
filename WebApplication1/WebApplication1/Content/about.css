@@ -1,0 +1,689 @@
+@font-face {
+  font-family: "RobotoCondensedRegular";
+  src: url("Content/fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot");
+  src: url("Content/fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot?#iefix") format("embedded-opentype"), url("fonts/RobotoCondensedRegular/RobotoCondensedRegular.woff") format("woff"), url("fonts/RobotoCondensedRegular/RobotoCondensedRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("Content/fonts/Lobster.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 21, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 38, ../sass/_grids.scss */
+header {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: url(/Content/images/about_bg.jpg);
+  padding-bottom: 80px;
+  background-size: cover;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+header:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 45, ../sass/_grids.scss */
+.toggle-nav {
+  display: none;
+}
+
+/* line 49, ../sass/_grids.scss */
+.navigation {
+  margin-left: 5.04587%;
+  width: 49.54128%;
+  float: left;
+  margin-right: 0.91743%;
+  margin-top: 20px;
+}
+
+/* line 55, ../sass/_grids.scss */
+.navigation ul li {
+  display: inline;
+  padding-right: 25px;
+}
+
+/* line 60, ../sass/_grids.scss */
+.navigation ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "RobotoCondensedRegular";
+  font-size: 1.2em;
+}
+
+/* line 67, ../sass/_grids.scss */
+.socials {
+  margin-left: 10.09174%;
+  width: 24.31193%;
+  float: right;
+  margin-right: 0;
+  color: #fff;
+  font-family: "RobotoCondensedRegular";
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+/* line 76, ../sass/_grids.scss */
+.socials p {
+  width: 58.49057%;
+  float: left;
+  margin-right: 3.77358%;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* line 82, ../sass/_grids.scss */
+.socials img {
+  width: 8.67925%;
+  float: left;
+  margin-right: 3.77358%;
+  margin-top: 11px;
+}
+
+/* line 87, ../sass/_grids.scss */
+.who_we_are {
+  margin-left: 15.13761%;
+  width: 69.72477%;
+  float: left;
+  margin-right: 0.91743%;
+}
+
+/* line 92, ../sass/_grids.scss */
+.who_we_are h2 {
+  text-align: center;
+  color: #fff;
+  font-family: "RobotoCondensedRegular";
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+/* line 100, ../sass/_grids.scss */
+.who_we_are h2 span {
+  color: #eac51e;
+}
+
+/* line 103, ../sass/_grids.scss */
+.who_we_are p {
+  color: #fff;
+  font-family: "RobotoCondensedRegular";
+  font-size: 1.3em;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* line 112, ../sass/_grids.scss */
+.about_middle {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.about_middle:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 116, ../sass/_grids.scss */
+.about_middle h2 {
+  margin-left: 45.41284%;
+  width: 9.17431%;
+  float: left;
+  margin-right: 0.91743%;
+  font-size: 1.5em;
+  border-bottom: 3px solid #eac51e;
+  color: #282828;
+  text-align: center;
+  font-family: "RobotoCondensedRegular";
+}
+
+/* line 125, ../sass/_grids.scss */
+.about_middle .about_text {
+  margin-left: 15.13761%;
+  width: 69.72477%;
+  float: left;
+  margin-right: 0.91743%;
+  padding-bottom: 50px;
+}
+
+/* line 131, ../sass/_grids.scss */
+.about_middle .about_text p {
+  color: #282828;
+  font-family: "RobotoCondensedRegular";
+  margin-top: 0;
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 1160px) {
+  /* line 141, ../sass/_grids.scss */
+  .navigation {
+    margin-left: 5.04587%;
+    width: 59.63303%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 145, ../sass/_grids.scss */
+  .navigation ul {
+    padding-left: 0;
+  }
+
+  /* line 148, ../sass/_grids.scss */
+  .socials {
+    margin-left: 0%;
+    width: 29.3578%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 980px) {
+  /* line 165, ../sass/_grids.scss */
+  .toggle-nav {
+    margin-left: 5.04587%;
+    width: 6.14679%;
+    float: left;
+    margin-right: 0.91743%;
+    display: inline-block;
+  }
+
+  /* line 171, ../sass/_grids.scss */
+  .navigation {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    margin-top: 0;
+  }
+
+  /* line 177, ../sass/_grids.scss */
+  .navigation ul li {
+    display: block;
+    padding-right: 25px;
+    text-align: center;
+  }
+
+  /* line 183, ../sass/_grids.scss */
+  .navigation ul.active {
+    display: none;
+  }
+
+  /* line 187, ../sass/_grids.scss */
+  .navigation ul {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  /* line 193, ../sass/_grids.scss */
+  .navigation li {
+    float: none;
+    display: block;
+    padding-left: 10px;
+    margin-right: 0;
+  }
+
+  /* line 200, ../sass/_grids.scss */
+  .navigation ul li a {
+    font-size: 1.8em;
+  }
+
+  /* line 204, ../sass/_grids.scss */
+  .navigation ul :nth-child(6) {
+    margin-right: 0;
+  }
+
+  /* line 208, ../sass/_grids.scss */
+  .socials {
+    position: absolute;
+    margin-top: 0;
+    margin-left: 70%;
+  }
+
+  /* line 214, ../sass/_grids.scss */
+  .socials p {
+    width: 82.8125%;
+    float: left;
+    margin-right: 3.125%;
+  }
+
+  /* line 218, ../sass/_grids.scss */
+  .socials img {
+    width: 10.625%;
+    float: left;
+    margin-right: 3.125%;
+  }
+
+  /* line 225, ../sass/_grids.scss */
+  .about_middle .about_text {
+    margin-left: 10.09174%;
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+    padding-bottom: 50px;
+  }
+
+  /* line 231, ../sass/_grids.scss */
+  .about_middle .about_text p {
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 800px) {
+  /* line 239, ../sass/_grids.scss */
+  .toggle-nav {
+    width: 11.19266%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 243, ../sass/_grids.scss */
+  .socials {
+    width: 39.44954%;
+    float: right;
+    margin-right: 0;
+    margin-left: 60%;
+  }
+
+  /* line 249, ../sass/_grids.scss */
+  .socials p {
+    width: 76.97674%;
+    float: left;
+    margin-right: 2.32558%;
+  }
+
+  /* line 253, ../sass/_grids.scss */
+  .socials img {
+    width: 13.02326%;
+    float: left;
+    margin-right: 2.32558%;
+  }
+
+  /* line 256, ../sass/_grids.scss */
+  .navigation ul li a {
+    font-size: 1.5em;
+  }
+
+  /* line 259, ../sass/_grids.scss */
+  .who_we_are p {
+    font-size: 1.2em;
+  }
+
+  /* line 264, ../sass/_grids.scss */
+  .about_middle h2 {
+    margin-left: 40.36697%;
+    width: 19.26606%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 269, ../sass/_grids.scss */
+  .about_middle .about_text p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 277, ../sass/_grids.scss */
+  header {
+    background: url(/Content/images/about_640bg.jpg);
+    background-size: cover;
+  }
+
+  /* line 283, ../sass/_grids.scss */
+  .toggle-nav {
+    width: 14.22018%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 287, ../sass/_grids.scss */
+  .socials {
+    display: none;
+  }
+
+  /* line 291, ../sass/_grids.scss */
+  .logotip {
+    margin-left: 20.18349%;
+    width: 59.63303%;
+    float: left;
+    margin-right: 0.91743%;
+    margin-top: -5px;
+  }
+
+  /* line 296, ../sass/_grids.scss */
+  .navigation {
+    margin-top: -20px;
+  }
+
+  /* line 301, ../sass/_grids.scss */
+  .who_we_are {
+    margin-left: 10.09174%;
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 306, ../sass/_grids.scss */
+  .who_we_are p {
+    font-size: 1.1em;
+  }
+
+  /* line 309, ../sass/_grids.scss */
+  .who_we_are h2 {
+    font-size: 2.5em;
+  }
+
+  /* line 316, ../sass/_grids.scss */
+  .about_middle .about_text {
+    margin-left: 5.04587%;
+    width: 89.90826%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 321, ../sass/_grids.scss */
+  .about_middle .about_text p {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 327, ../sass/_grids.scss */
+  .who_we_are h2 {
+    font-size: 2em;
+  }
+
+  /* line 333, ../sass/_grids.scss */
+  .who_we_are p {
+    font-size: 1em;
+  }
+}
+/* line 45, ../sass/_normalizer.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 61, ../sass/_normalizer.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 74, ../sass/_normalizer.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 84, ../sass/_normalizer.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 97, ../sass/_normalizer.scss */
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 109, ../sass/_normalizer.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 119, ../sass/_normalizer.scss */
+body {
+  margin: 0;
+}
+
+/* line 132, ../sass/_normalizer.scss */
+a {
+  background: transparent;
+}
+/* line 139, ../sass/_normalizer.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 145, ../sass/_normalizer.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 159, ../sass/_normalizer.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 164, ../sass/_normalizer.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 169, ../sass/_normalizer.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 174, ../sass/_normalizer.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 179, ../sass/_normalizer.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 184, ../sass/_normalizer.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/* line 192, ../sass/_normalizer.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 198, ../sass/_normalizer.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 211, ../sass/_normalizer.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 217, ../sass/_normalizer.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 233, ../sass/_normalizer.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 246, ../sass/_normalizer.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 254, ../sass/_normalizer.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 270, ../sass/_normalizer.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 279, ../sass/_normalizer.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 286, ../sass/_normalizer.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 294, ../sass/_normalizer.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 298, ../sass/_normalizer.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 350, ../sass/_normalizer.scss */
+img {
+  border: 0;
+}
+
+/* line 359, ../sass/_normalizer.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 369, ../sass/_normalizer.scss */
+figure {
+  margin: 0;
+}
+
+/* line 386, ../sass/_normalizer.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 397, ../sass/_normalizer.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 411, ../sass/_normalizer.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* line 426, ../sass/_normalizer.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 435, ../sass/_normalizer.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 448, ../sass/_normalizer.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 461, ../sass/_normalizer.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 470, ../sass/_normalizer.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 479, ../sass/_normalizer.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 490, ../sass/_normalizer.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 498, ../sass/_normalizer.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 506, ../sass/_normalizer.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/* line 516, ../sass/_normalizer.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}

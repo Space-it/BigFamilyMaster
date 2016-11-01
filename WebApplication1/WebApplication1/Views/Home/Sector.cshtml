@@ -1,0 +1,78 @@
+﻿@model BigFamilyWeb.Sector
+
+@{
+    ViewBag.Title = "Sector";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/Content/sector_css")
+<script>
+    var css = "header{background: url('@Html.DisplayFor(model => model.ImageURL)') no-repeat;background-size: cover;}@@media screen and (max-width: 640px){header{background: url('@Html.DisplayFor(model => model.ImageMobileURL)') no-repeat;background-size: cover;}}",
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+style.type = 'text/css';
+if (style.styleSheet){
+  style.styleSheet.cssText = css;
+} else {
+  style.appendChild(document.createTextNode(css));
+}
+
+head.appendChild(style);
+</script>
+
+<header>
+
+    <img src="/Content/images/mobile_menu.png" alt="Mobile Menu" class="toggle-nav" />
+
+    <nav class="navigation">
+        <ul class="menu active">
+            <li>
+                @Html.ActionLink("Главная", "Index", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("О нас", "About", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Услуги", "Services", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Новости", "News", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Партнеры", "Partners", "Home")
+            </li>
+            <li class="click">
+                @Html.ActionLink("Контакты", "Contacts", "Home")
+            </li>
+        </ul>
+    </nav>
+
+    <div class="socials">
+        <p>+38 (066) 355-84-12</p>
+        <img src="/Content/images/vk.png" alt="vk" class="vk_button">
+    </div>
+
+    <div class="sector_name">
+        <a href="/Home/Sector/@(ViewBag.SectorIndex-1)"><img src="/Content/images/arrow_left.png" alt="arrow_left" class="left"></a>
+        <div class="name">
+            <img src="/Content/images/decoration.png" alt="decoration">
+        </div>
+
+        <a href="/Home/Sector/@(ViewBag.SectorIndex+1)">	<img src="/Content/images/arrow_right.png" alt="arrow_right" class="right"></a>
+    </div>
+</header>
+
+
+<section class="sector">
+    <div class="sector_text">
+        <h2>@Html.DisplayFor(model => model.Name)</h2>
+        <p>
+            Хорошему заведению сложно уследить за всеми моментами качества и наша команда идет на встречу вашему заведению: Мы можем предоставить вам услуги по приобретению, установке кальянов, подборе угля, табака, миксов, комплектующий для кальяна. Мы можем подобрать/обучить достойный персонал, который будет качественно обслуживать гостей вашего заведения.<br>
+
+            Мы можем разместить в вашем ресторане, баре, клубе свои кальяны и вам не надо будет заниматься подбором персонала, закупкой оборудования, закупкой сырья, следить за качеством кальяна (все это будем делать Мы). При всем этом заведение получает своих чистых 50% от сумы заказов.
+        </p>
+
+           <a href="@Html.DisplayFor(model => model.PriceURL)"<button>Скачать прайс</button></a>
+    </div>
+
+
+</section>

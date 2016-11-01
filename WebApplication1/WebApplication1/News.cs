@@ -18,5 +18,6 @@ namespace BigFamilyWeb
         public string Title { get; set; }
         public string Content { get; set; }
         public string ImageURL { get; set; }
+        public System.DateTime InsertDate { get; set; }
     }
 }

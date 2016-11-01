@@ -178,6 +178,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\about.css" />
     <Content Include="Content\AdminStyle.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -187,8 +188,13 @@
     <Content Include="Content\images\1200_bg.jpg" />
     <Content Include="Content\images\400_bg.jpg" />
     <Content Include="Content\images\640_bg.jpg" />
+    <Content Include="Content\images\about_640bg.jpg" />
+    <Content Include="Content\images\about_bg.jpg" />
     <Content Include="Content\images\admin-bg.jpg" />
+    <Content Include="Content\images\arrow_left.png" />
+    <Content Include="Content\images\arrow_right.png" />
     <Content Include="Content\images\circle.png" />
+    <Content Include="Content\images\decoration.png" />
     <Content Include="Content\images\email.png" />
     <Content Include="Content\images\footer_bg.jpg" />
     <Content Include="Content\images\graf.png" />
@@ -200,6 +206,8 @@
     <Content Include="Content\images\lamp_yellow_.png" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\mobile_menu.png" />
+    <Content Include="Content\images\news_640bg.jpg" />
+    <Content Include="Content\images\news_bg.jpg" />
     <Content Include="Content\images\phone.png" />
     <Content Include="Content\images\rupor.png" />
     <Content Include="Content\images\services_1200bg.jpg" />
@@ -209,6 +217,8 @@
     <Content Include="Content\images\vk.png" />
     <Content Include="Content\images\vk2.png" />
     <Content Include="Content\index.css" />
+    <Content Include="Content\news.css" />
+    <Content Include="Content\sector.css" />
     <Content Include="Content\services.css" />
     <Content Include="Content\style-form.css" />
     <Content Include="familydb.Context.tt">
@@ -242,6 +252,7 @@
     <Content Include="Content\fonts\RobotoCondensedRegular\RobotoCondensedRegular.eot" />
     <Content Include="Content\fonts\RobotoCondensedRegular\RobotoCondensedRegular.ttf" />
     <Content Include="Content\fonts\RobotoCondensedRegular\RobotoCondensedRegular.woff" />
+    <Content Include="Content\fonts\Lobster.ttf" />
     <None Include="Properties\PublishProfiles\bigfamily - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\bigfamily - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -312,9 +323,12 @@
     <Content Include="Views\Sectors\Error.cshtml" />
     <Content Include="Views\Home\Partners.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
+    <Content Include="Views\Home\Sector.cshtml" />
+    <Content Include="Views\Home\NewsList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\news\" />
     <Folder Include="Content\prices\" />
     <Folder Include="Content\sectorBigImages\" />
     <Folder Include="Content\sectorMinImages\" />

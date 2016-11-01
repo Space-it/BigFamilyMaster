@@ -1,16 +1,15 @@
 ﻿
-@model IEnumerable<Sector>
+@model IList<Sector>
 
-<!--/Content/images/lamp_yellow.png-->
-@foreach (var item in Model)
+@for(int i =0;i< Model.Count();i++)
 {
-    <div class="sector" style="background: url('@Html.DisplayFor(Modelitem => item.MinImageUrl)');background-size:cover;">
-        <img src="/Content/images/lamp_@Html.DisplayFor(Modelitem => item.LampColor)_.png" alt="lamp_@Html.DisplayFor(Modelitem => item.LampColor)" class="sector_lamp">
-        <h2>@Html.DisplayFor(Modelitem => item.MinTitle)</h2>
+    <div class="sector" style="background: url('@Html.DisplayFor(Modelitem => Model[i].MinImageUrl)');background-size:cover;">
+        <img src="/Content/images/lamp_@Html.DisplayFor(Modelitem => Model[i].LampColor)_.png" alt="lamp_@Html.DisplayFor(Modelitem => Model[i].LampColor)" class="sector_lamp">
+        <h2>@Html.DisplayFor(Modelitem => Model[i].MinTitle)</h2>
         <p>
-            @Html.DisplayFor(Modelitem => item.MinKeywords)
+            @Html.DisplayFor(Modelitem => Model[i].MinKeywords)
         </p>
-        <button>Подробнее</button>
+        <a href="/Home/Sector/@i"><button>Подробнее</button></a>
     </div>
 
 }

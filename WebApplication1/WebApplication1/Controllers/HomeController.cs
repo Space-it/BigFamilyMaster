@@ -24,12 +24,28 @@ namespace BigFamilyWeb.Controllers
         }
         public ActionResult Services()
         {
-
             return View(db.Sectors.ToList());
+        }
+
+        public ActionResult Sector(int id)
+        {
+            List<Sector> tempList = null;
+            if (db.Sectors.Count() != 0)
+                tempList = db.Sectors.ToList();
+            
+                if (id >= tempList.Count)
+                    id = 0;
+                if (id < 0)
+                    id = tempList.Count - 1;
+
+                ViewBag.SectorIndex = id;
+            return View(tempList[id]);
+
         }
         public ActionResult News()
         {
-            return View();
+            var News = db.News.ToList();
+            return View(News);
         }
         public ActionResult Partners()
         {

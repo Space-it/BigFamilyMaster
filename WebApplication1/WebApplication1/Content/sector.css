@@ -1,0 +1,711 @@
+@font-face {
+  font-family: "RobotoCondensedRegular";
+  src: url("Content/fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot");
+  src: url("Content/fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot?#iefix") format("embedded-opentype"), url("fonts/RobotoCondensedRegular/RobotoCondensedRegular.woff") format("woff"), url("fonts/RobotoCondensedRegular/RobotoCondensedRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("Content/fonts/Lobster.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 21, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 38, ../sass/_grids.scss */
+header {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  min-height: 500px;
+  padding-bottom: 50px;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+header:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 45, ../sass/_grids.scss */
+.toggle-nav {
+  display: none;
+}
+
+/* line 49, ../sass/_grids.scss */
+.navigation {
+  margin-left: 5.04587%;
+  width: 49.54128%;
+  float: left;
+  margin-right: 0.91743%;
+  margin-top: 20px;
+}
+
+/* line 55, ../sass/_grids.scss */
+.navigation ul li {
+  display: inline;
+  padding-right: 25px;
+}
+
+/* line 60, ../sass/_grids.scss */
+.navigation ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "RobotoCondensedRegular";
+  font-size: 1.2em;
+}
+
+/* line 67, ../sass/_grids.scss */
+.socials {
+  margin-left: 10.09174%;
+  width: 24.31193%;
+  float: right;
+  margin-right: 0;
+  color: #fff;
+  font-family: "RobotoCondensedRegular";
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+/* line 76, ../sass/_grids.scss */
+.socials p {
+  width: 58.49057%;
+  float: left;
+  margin-right: 3.77358%;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* line 82, ../sass/_grids.scss */
+.socials img {
+  width: 8.67925%;
+  float: left;
+  margin-right: 3.77358%;
+  margin-top: 11px;
+}
+
+/* line 87, ../sass/_grids.scss */
+.sector_name {
+  margin-left: 5.04587%;
+  width: 89.90826%;
+  float: left;
+  margin-right: 0.91743%;
+  margin-top: 30px;
+}
+
+/* line 92, ../sass/_grids.scss */
+.sector_name .left {
+  width: 4.59184%;
+  float: left;
+  margin-right: 1.02041%;
+  margin-top: 115px;
+}
+
+/* line 96, ../sass/_grids.scss */
+.sector_name .name {
+  margin-left: 22.44898%;
+  width: 43.87755%;
+  float: left;
+  margin-right: 1.02041%;
+  position: relative;
+}
+
+/* line 102, ../sass/_grids.scss */
+.sector_name .name img {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 107, ../sass/_grids.scss */
+.sector_name .right {
+  width: 4.59184%;
+  float: right;
+  margin-right: 0;
+  margin-top: 115px;
+}
+
+/* line 113, ../sass/_grids.scss */
+.sector {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: rgba(0, 0, 0, 0.18);
+  background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.18) 0%, white 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0, 0, 0, 0.18)), color-stop(100%, white));
+  background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.18) 0%, white 100%);
+  background: -o-linear-gradient(-45deg, rgba(0, 0, 0, 0.18) 0%, white 100%);
+  background: -ms-linear-gradient(-45deg, rgba(0, 0, 0, 0.18) 0%, white 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.18) 0%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=1 );
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.sector:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 126, ../sass/_grids.scss */
+.sector .sector_text {
+  margin-left: 20.18349%;
+  width: 59.63303%;
+  float: left;
+  margin-right: 0.91743%;
+}
+
+/* line 130, ../sass/_grids.scss */
+.sector .sector_text h2 {
+  font-family: "RobotoCondensedRegular";
+  text-align: center;
+  margin-top: 0;
+}
+
+/* line 135, ../sass/_grids.scss */
+.sector .sector_text p {
+  font-family: "RobotoCondensedRegular";
+  text-align: justify;
+  font-size: 1.3em;
+}
+
+/* line 140, ../sass/_grids.scss */
+.sector .sector_text button {
+  margin-left: 25.38462%;
+  width: 49.23077%;
+  float: left;
+  margin-right: 1.53846%;
+  height: 35px;
+  border: 2px solid #ceaf20;
+  border-radius: 10px;
+  background: none;
+  font-family: "RobotoCondensedRegular";
+}
+
+@media screen and (max-width: 1160px) {
+  /* line 153, ../sass/_grids.scss */
+  .navigation {
+    margin-left: 5.04587%;
+    width: 59.63303%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 157, ../sass/_grids.scss */
+  .navigation ul {
+    padding-left: 0;
+  }
+
+  /* line 160, ../sass/_grids.scss */
+  .socials {
+    margin-left: 0%;
+    width: 29.3578%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 165, ../sass/_grids.scss */
+  .sector_name .name p {
+    margin-top: 90px;
+  }
+}
+@media screen and (max-width: 980px) {
+  /* line 182, ../sass/_grids.scss */
+  .toggle-nav {
+    margin-left: 5.04587%;
+    width: 6.14679%;
+    float: left;
+    margin-right: 0.91743%;
+    display: inline-block;
+  }
+
+  /* line 188, ../sass/_grids.scss */
+  .navigation {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    margin-top: 0;
+  }
+
+  /* line 194, ../sass/_grids.scss */
+  .navigation ul li {
+    display: block;
+    padding-right: 25px;
+    text-align: center;
+  }
+
+  /* line 200, ../sass/_grids.scss */
+  .navigation ul.active {
+    display: none;
+  }
+
+  /* line 204, ../sass/_grids.scss */
+  .navigation ul {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  /* line 210, ../sass/_grids.scss */
+  .navigation li {
+    float: none;
+    display: block;
+    padding-left: 10px;
+    margin-right: 0;
+  }
+
+  /* line 217, ../sass/_grids.scss */
+  .navigation ul li a {
+    font-size: 1.8em;
+  }
+
+  /* line 221, ../sass/_grids.scss */
+  .navigation ul :nth-child(6) {
+    margin-right: 0;
+  }
+
+  /* line 225, ../sass/_grids.scss */
+  .socials {
+    position: absolute;
+    margin-top: 0;
+    margin-left: 70%;
+  }
+
+  /* line 231, ../sass/_grids.scss */
+  .socials p {
+    width: 82.8125%;
+    float: left;
+    margin-right: 3.125%;
+  }
+
+  /* line 235, ../sass/_grids.scss */
+  .socials img {
+    width: 10.625%;
+    float: left;
+    margin-right: 3.125%;
+  }
+
+  /* line 240, ../sass/_grids.scss */
+  .sector_name .name {
+    margin-left: 11.22449%;
+    width: 66.32653%;
+    float: left;
+    margin-right: 1.02041%;
+  }
+
+  /* line 249, ../sass/_grids.scss */
+  .sector .sector_text {
+    margin-left: 10.09174%;
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+}
+@media screen and (max-width: 800px) {
+  /* line 258, ../sass/_grids.scss */
+  .toggle-nav {
+    width: 11.19266%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 262, ../sass/_grids.scss */
+  .socials {
+    width: 39.44954%;
+    float: right;
+    margin-right: 0;
+    margin-left: 60%;
+  }
+
+  /* line 268, ../sass/_grids.scss */
+  .socials p {
+    width: 76.97674%;
+    float: left;
+    margin-right: 2.32558%;
+  }
+
+  /* line 272, ../sass/_grids.scss */
+  .socials img {
+    width: 13.02326%;
+    float: left;
+    margin-right: 2.32558%;
+  }
+
+  /* line 275, ../sass/_grids.scss */
+  .navigation ul li a {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 288, ../sass/_grids.scss */
+  .toggle-nav {
+    width: 14.22018%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 292, ../sass/_grids.scss */
+  .socials {
+    display: none;
+  }
+
+  /* line 296, ../sass/_grids.scss */
+  .logotip {
+    margin-left: 20.18349%;
+    width: 59.63303%;
+    float: left;
+    margin-right: 0.91743%;
+    margin-top: -5px;
+  }
+
+  /* line 301, ../sass/_grids.scss */
+  .navigation {
+    margin-top: -20px;
+  }
+
+  /* line 306, ../sass/_grids.scss */
+  .sector_name {
+    margin-left: 3.02752%;
+    width: 93.94495%;
+    float: left;
+    margin-right: 0.91743%;
+    margin-top: 30px;
+  }
+
+  /* line 311, ../sass/_grids.scss */
+  .sector_name .left {
+    width: 7.61719%;
+    float: left;
+    margin-right: 0.97656%;
+  }
+
+  /* line 314, ../sass/_grids.scss */
+  .sector_name .name {
+    margin-left: 4.29688%;
+    width: 74.21875%;
+    float: left;
+    margin-right: 0.97656%;
+  }
+
+  /* line 321, ../sass/_grids.scss */
+  .sector_name .right {
+    width: 7.61719%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 326, ../sass/_grids.scss */
+  .sector .sector_text {
+    margin-left: 5.04587%;
+    width: 89.90826%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 334, ../sass/_grids.scss */
+  header {
+    padding-bottom: 0;
+  }
+
+  /* line 339, ../sass/_grids.scss */
+  .sector_name .right {
+    margin-top: 75px;
+  }
+
+  /* line 342, ../sass/_grids.scss */
+  .sector_name .left {
+    margin-top: 75px;
+  }
+}
+/* line 45, ../sass/_normalizer.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 61, ../sass/_normalizer.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 74, ../sass/_normalizer.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 84, ../sass/_normalizer.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 97, ../sass/_normalizer.scss */
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 109, ../sass/_normalizer.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 119, ../sass/_normalizer.scss */
+body {
+  margin: 0;
+}
+
+/* line 132, ../sass/_normalizer.scss */
+a {
+  background: transparent;
+}
+/* line 139, ../sass/_normalizer.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 145, ../sass/_normalizer.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 159, ../sass/_normalizer.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 164, ../sass/_normalizer.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 169, ../sass/_normalizer.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 174, ../sass/_normalizer.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 179, ../sass/_normalizer.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 184, ../sass/_normalizer.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/* line 192, ../sass/_normalizer.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 198, ../sass/_normalizer.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 211, ../sass/_normalizer.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 217, ../sass/_normalizer.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 233, ../sass/_normalizer.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 246, ../sass/_normalizer.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 254, ../sass/_normalizer.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 270, ../sass/_normalizer.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 279, ../sass/_normalizer.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 286, ../sass/_normalizer.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 294, ../sass/_normalizer.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 298, ../sass/_normalizer.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 350, ../sass/_normalizer.scss */
+img {
+  border: 0;
+}
+
+/* line 359, ../sass/_normalizer.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 369, ../sass/_normalizer.scss */
+figure {
+  margin: 0;
+}
+
+/* line 386, ../sass/_normalizer.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 397, ../sass/_normalizer.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 411, ../sass/_normalizer.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* line 426, ../sass/_normalizer.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 435, ../sass/_normalizer.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 448, ../sass/_normalizer.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 461, ../sass/_normalizer.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 470, ../sass/_normalizer.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 479, ../sass/_normalizer.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 490, ../sass/_normalizer.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 498, ../sass/_normalizer.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 506, ../sass/_normalizer.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/* line 516, ../sass/_normalizer.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
