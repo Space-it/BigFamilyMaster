@@ -35,6 +35,8 @@ namespace BigFamilyWeb
                       "~/Content/sector.css"));
             bundles.Add(new StyleBundle("~/Content/news_css").Include(
                       "~/Content/news.css"));
+            bundles.Add(new StyleBundle("~/Content/partners_css").Include(
+                      "~/Content/partners.css"));
             bundles.Add(new StyleBundle("~/Content/footer_css").Include(
                       "~/Content/footer.css"));
         }

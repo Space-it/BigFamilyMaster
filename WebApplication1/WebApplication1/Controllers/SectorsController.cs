@@ -51,12 +51,14 @@ namespace BigFamilyWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name,Description,ImageURL,ImaeMobileURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload, HttpPostedFileBase ImageMobileUpload)
+        public ActionResult Create([Bind(Include = "Name,Description,ImageURL,ImaeMobileURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor,DecorationURL")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload, HttpPostedFileBase ImageMobileUpload, HttpPostedFileBase ImageDecorationUpload)
         {
             string fileName = string.Empty;
             string fileName1 = string.Empty;
             string fileName2 = string.Empty;
             string fileName3 = string.Empty;
+            string fileName4 = string.Empty;
+            sector.MinImageUrl = "";
             if (MinUpload != null)
             {
                 if (System.IO.File.Exists(Server.MapPath("~/" + sector.MinImageUrl)))
@@ -65,7 +67,23 @@ namespace BigFamilyWeb.Controllers
                 fileName = System.IO.Path.GetFileName(MinUpload.FileName);
                 // сохраняем файл в папку Files в проекте
                 MinUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorMinImages\\" + fileName);
+                sector.MinImageUrl = "/Content/sectorMinImages/" + fileName;
             }
+
+            sector.DecorationURL = "";
+            if (ImageDecorationUpload != null)
+            {
+                if (System.IO.File.Exists(Server.MapPath("~/" + sector.DecorationURL)))
+                    System.IO.File.Delete(Server.MapPath("~/" + sector.DecorationURL));
+                // получаем имя файла
+                fileName4 = System.IO.Path.GetFileName(ImageDecorationUpload.FileName);
+                // сохраняем файл в папку Files в проекте
+                ImageDecorationUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\decorations\\" + fileName4);
+                sector.DecorationURL = "/Content/decorations/" + fileName4;
+            }
+
+            
+            sector.PriceURL = "";
             if (PriceUpload != null)
             {
                 if (System.IO.File.Exists(Server.MapPath("~/" + sector.PriceURL)))
@@ -75,7 +93,9 @@ namespace BigFamilyWeb.Controllers
                 fileName1 = System.IO.Path.GetFileName(PriceUpload.FileName);
                 // сохраняем файл в папку Files в проекте
                 PriceUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\prices\\" + fileName1);
+                sector.PriceURL = "/Content/prices/" + fileName1;
             }
+            sector.ImageURL = "";
             if (ImageUpload != null)
             {
                 if (System.IO.File.Exists(Server.MapPath("~/" + sector.ImageURL)))
@@ -84,7 +104,9 @@ namespace BigFamilyWeb.Controllers
                 fileName2 = System.IO.Path.GetFileName(ImageUpload.FileName);
                 // сохраняем файл в папку Files в проекте
                 ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorBigImages\\" + fileName2);
+                sector.ImageURL = "/Content/sectorBigImages/" + fileName2;
             }
+            sector.ImageMobileURL = "";
             if (ImageMobileUpload != null)
             {
                 if (System.IO.File.Exists(Server.MapPath("~/" + sector.ImageMobileURL)))
@@ -92,17 +114,12 @@ namespace BigFamilyWeb.Controllers
                 // получаем имя файла
                 fileName3 = System.IO.Path.GetFileName(ImageMobileUpload.FileName);
                 // сохраняем файл в папку Files в проекте
-                ImageMobileUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorBigImages\\" + fileName2);
+                ImageMobileUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorBigImages\\" + fileName3);
+                sector.ImageMobileURL = "/Content/sectorBigImages/" + fileName3;
             }
-
-            sector.MinImageUrl = "/Content/sectorMinImages/" + fileName;
-            sector.PriceURL = "/Content/prices/" + fileName1;
-            sector.ImageURL = "/Content/sectorBigImages/" + fileName2;
+            
             if (ModelState.IsValid)
             {
-                sector.MinImageUrl = "/Content/sectorMinImages/" + fileName;
-                sector.PriceURL = "/Content/prices/" + fileName1;
-                sector.ImageURL = "/Content/sectorBigImages/" + fileName2;
                 db.Sectors.Add(sector);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -131,7 +148,7 @@ namespace BigFamilyWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Name,Description,ImageURL,ImaeMobileURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload, HttpPostedFileBase ImageMobileUpload)
+        public ActionResult Edit([Bind(Include = "Name,Description,ImageURL,ImaeMobileURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor,DecorationURL")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload, HttpPostedFileBase ImageMobileUpload, HttpPostedFileBase ImageDecorationUpload)
         {
             if (MinUpload != null)
             {
@@ -143,6 +160,16 @@ namespace BigFamilyWeb.Controllers
                 // сохраняем файл в папку Files в проекте
                 MinUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorMinImages\\" + fileName);
                 sector.MinImageUrl = "/Content/sectorMinImages/" + fileName;
+            }
+            if (ImageDecorationUpload != null)
+            {
+                if (System.IO.File.Exists(Server.MapPath("~/" + sector.DecorationURL)))
+                    System.IO.File.Delete(Server.MapPath("~/" + sector.DecorationURL));
+                // получаем имя файла
+                string fileName = System.IO.Path.GetFileName(ImageDecorationUpload.FileName);
+                // сохраняем файл в папку Files в проекте
+                ImageDecorationUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\decorations\\" + fileName);
+                sector.DecorationURL = "/Content/decorations/" + fileName;
             }
             if (ImageUpload != null)
             {
@@ -162,7 +189,7 @@ namespace BigFamilyWeb.Controllers
                 string fileName = System.IO.Path.GetFileName(ImageMobileUpload.FileName);
                 // сохраняем файл в папку Files в проекте
                 ImageMobileUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\sectorBigImages\\" + fileName);
-                sector.ImageURL = "/Content/sectorBigImages/" + fileName;
+                sector.ImageMobileURL = "/Content/sectorBigImages/" + fileName;
             }
             if (PriceUpload != null)
             {
@@ -172,7 +199,7 @@ namespace BigFamilyWeb.Controllers
                 string fileName = System.IO.Path.GetFileName(PriceUpload.FileName);
                 // сохраняем файл в папку Files в проекте
                 ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\prices\\" + fileName);
-                sector.ImageURL = "/Content/prices/" + fileName;
+                sector.PriceURL = "/Content/prices/" + fileName;
             }
             if (ModelState.IsValid)
             {
@@ -212,6 +239,8 @@ namespace BigFamilyWeb.Controllers
                 System.IO.File.Delete(Server.MapPath("~/" + sector.ImageMobileURL));
             if (System.IO.File.Exists(Server.MapPath("~/" + sector.PriceURL)))
                 System.IO.File.Delete(Server.MapPath("~/" + sector.PriceURL));
+            if (System.IO.File.Exists(Server.MapPath("~/" + sector.DecorationURL)))
+                System.IO.File.Delete(Server.MapPath("~/" + sector.DecorationURL));
             db.Sectors.Remove(sector);
             db.SaveChanges();
             return RedirectToAction("Index");

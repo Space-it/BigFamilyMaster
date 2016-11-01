@@ -34,6 +34,7 @@
           </Key>
           <Property Name="MemberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
           <Property Name="ImageURL" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="News">
@@ -60,6 +61,7 @@
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
           <Property Name="ImageURL" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DecorationURL" Type="nvarchar(max)" Nullable="false" />
           <Property Name="ImageMobileURL" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Contacts" Type="nvarchar" MaxLength="200" />
           <Property Name="SectorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
@@ -106,6 +108,7 @@
           <Property Name="MinKeywords" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="LampColor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="ImageMobileURL" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DecorationURL" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="familydbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="News" EntityType="Self.News" />
@@ -129,6 +132,7 @@
           <Property Name="MemberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ImageURL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Phone">
           <Key>
@@ -173,6 +177,7 @@
           <EntitySetMapping Name="Sectors">
             <EntityTypeMapping TypeName="familydbModel.Sector">
               <MappingFragment StoreEntitySet="Sector">
+                <ScalarProperty Name="DecorationURL" ColumnName="DecorationURL" />
                 <ScalarProperty Name="ImageMobileURL" ColumnName="ImageMobileURL" />
                 <ScalarProperty Name="LampColor" ColumnName="LampColor" />
                 <ScalarProperty Name="MinKeywords" ColumnName="MinKeywords" />
@@ -198,6 +203,7 @@
           <EntitySetMapping Name="Members">
             <EntityTypeMapping TypeName="familydbModel.Member">
               <MappingFragment StoreEntitySet="Members">
+                <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="MemberId" ColumnName="MemberId" />

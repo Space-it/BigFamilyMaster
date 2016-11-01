@@ -25,5 +25,6 @@ namespace BigFamilyWeb
         public string MinKeywords { get; set; }
         public string LampColor { get; set; }
         public string ImageMobileURL { get; set; }
+        public string DecorationURL { get; set; }
     }
 }

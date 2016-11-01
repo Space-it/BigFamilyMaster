@@ -3,6 +3,65 @@
     ViewBag.Title = "Partners";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@Styles.Render("~/Content/partners_css")
+<header>
 
-<h2>Partners</h2>
+    <img src="images/mobile_menu.png" alt="Mobile Menu" class="toggle-nav" />
+
+    <nav class="navigation">
+        <ul class="menu active">
+            <li>
+                @Html.ActionLink("Главная", "Index", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("О нас", "About", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Услуги", "Services", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Новости", "News", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Партнеры", "Partners", "Home")
+            </li>
+            <li class="click">
+                <a href="#contacts">Контакты</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="socials">
+        <p>+38 (066) 355-84-12</p>
+        <img src="images/vk.png" alt="vk" class="vk_button">
+    </div>
+
+    <div class="partners_description">
+        <h2>Партнеры</h2>
+        <p>Люди, которые нам доверяют</p>
+    </div>
+
+</header>
+
+
+<section class="partners">
+    <div class="one_partner">
+        <img src="images/aristokrat.png" alt="aristokrat">
+    </div>
+    <div class="one_partner">
+        <img src="images/ais.png" alt="aristokrat">
+    </div>
+    <div class="one_partner">
+        <img src="images/ccc.jpg" alt="aristokrat">
+    </div>
+    <div class="one_partner">
+        <img src="images/ais.png" alt="aristokrat">
+    </div>
+    <div class="one_partner">
+        <img src="images/aristokrat.png" alt="aristokrat">
+    </div>
+    <div class="one_partner">
+        <img src="images/ccc.jpg" alt="aristokrat">
+    </div>
+</section>
 

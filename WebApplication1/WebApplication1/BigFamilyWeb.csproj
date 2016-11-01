@@ -191,8 +191,11 @@
     <Content Include="Content\images\about_640bg.jpg" />
     <Content Include="Content\images\about_bg.jpg" />
     <Content Include="Content\images\admin-bg.jpg" />
+    <Content Include="Content\images\ais.png" />
+    <Content Include="Content\images\aristokrat.png" />
     <Content Include="Content\images\arrow_left.png" />
     <Content Include="Content\images\arrow_right.png" />
+    <Content Include="Content\images\ccc.jpg" />
     <Content Include="Content\images\circle.png" />
     <Content Include="Content\images\decoration.png" />
     <Content Include="Content\images\email.png" />
@@ -208,6 +211,8 @@
     <Content Include="Content\images\mobile_menu.png" />
     <Content Include="Content\images\news_640bg.jpg" />
     <Content Include="Content\images\news_bg.jpg" />
+    <Content Include="Content\images\partners_640bg.jpg" />
+    <Content Include="Content\images\partners_bg.jpg" />
     <Content Include="Content\images\phone.png" />
     <Content Include="Content\images\rupor.png" />
     <Content Include="Content\images\services_1200bg.jpg" />
@@ -218,6 +223,7 @@
     <Content Include="Content\images\vk2.png" />
     <Content Include="Content\index.css" />
     <Content Include="Content\news.css" />
+    <Content Include="Content\partners.css" />
     <Content Include="Content\sector.css" />
     <Content Include="Content\services.css" />
     <Content Include="Content\style-form.css" />
@@ -283,7 +289,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Emails\Create.cshtml" />
     <Content Include="Views\Emails\Delete.cshtml" />
@@ -320,7 +325,6 @@
     <Content Include="Views\Contacts\Details.cshtml" />
     <Content Include="Views\Contacts\Edit.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
-    <Content Include="Views\Sectors\Error.cshtml" />
     <Content Include="Views\Home\Partners.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
     <Content Include="Views\Home\Sector.cshtml" />
@@ -328,6 +332,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\decorations\" />
     <Folder Include="Content\news\" />
     <Folder Include="Content\prices\" />
     <Folder Include="Content\sectorBigImages\" />

@@ -57,7 +57,7 @@ namespace BigFamilyWeb.Controllers
                 filename = System.IO.Path.GetFileName(ImageUpload.FileName);
                 // сохраняем файл в папку Files в проекте
                 ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\news\\" + filename);
-                
+                news.ImageURL = "/Content/news/" + filename;
             }
             news.InsertDate = DateTime.Now;
             news.ImageURL = "/Content/news/" + filename;
@@ -103,7 +103,7 @@ namespace BigFamilyWeb.Controllers
                 filename = System.IO.Path.GetFileName(ImageUpload.FileName);
                 // сохраняем файл в папку Files в проекте
                 ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\news\\" + filename);
-                
+                news.ImageURL = "/Content/news/" + filename;
             }
             news.InsertDate = DateTime.Now;
 

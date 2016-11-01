@@ -41,7 +41,7 @@ head.appendChild(style);
                 @Html.ActionLink("Партнеры", "Partners", "Home")
             </li>
             <li class="click">
-                @Html.ActionLink("Контакты", "Contacts", "Home")
+                <a href="#contacts">Контакты</a>
             </li>
         </ul>
     </nav>
@@ -54,7 +54,7 @@ head.appendChild(style);
     <div class="sector_name">
         <a href="/Home/Sector/@(ViewBag.SectorIndex-1)"><img src="/Content/images/arrow_left.png" alt="arrow_left" class="left"></a>
         <div class="name">
-            <img src="/Content/images/decoration.png" alt="decoration">
+            <img src="@Html.DisplayFor(model => model.DecorationURL)" alt="decoration">
         </div>
 
         <a href="/Home/Sector/@(ViewBag.SectorIndex+1)">	<img src="/Content/images/arrow_right.png" alt="arrow_right" class="right"></a>

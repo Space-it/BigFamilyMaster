@@ -14,10 +14,6 @@ namespace BigFamilyWeb.Controllers
         {
             return View();
         }
-        public ActionResult Contacts()
-        {
-            return View();
-        }
         public ActionResult About()
         {
             return View();
@@ -44,8 +40,7 @@ namespace BigFamilyWeb.Controllers
         }
         public ActionResult News()
         {
-            var News = db.News.ToList();
-            return View(News);
+            return View(db.News.ToList());
         }
         public ActionResult Partners()
         {

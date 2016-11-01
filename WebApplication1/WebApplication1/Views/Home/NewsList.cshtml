@@ -1,11 +1,13 @@
 ﻿@model IEnumerable<News>
-
-@foreach(News item in Model)
+@foreach (var item in Model)
 {
-<div class="one_news">
-    <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
-    
-    <img src="@Html.DisplayFor(modelItem => item.ImageURL)" alt="@item.ImageURL.Split('/').Last().ToString()">
-    <p class="text">@Html.DisplayFor(modelItem => item.Content)</p>
-</div>
+    <div class="one_news">
+        <h3>
+            @Html.DisplayFor(modelItem => item.Title)
+        </h3>
+        <p class="data">@item.InsertDate.ToShortDateString()</p>
+        <img src="@Html.DisplayFor(modelItem => item.ImageURL)" />
+                <p class="text">@Html.DisplayFor(modelItem => item.Content)</p>
+                
+        </div>
 }

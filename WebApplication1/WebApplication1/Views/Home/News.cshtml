@@ -26,7 +26,7 @@
                 @Html.ActionLink("Партнеры", "Partners", "Home")
             </li>
             <li class="click">
-                @Html.ActionLink("Контакты", "Contacts", "Home")
+                <a href="#contacts">Контакты</a>
             </li>
         </ul>
     </nav>
@@ -46,7 +46,8 @@
 
 <section class="news_section">
 
-    @Html.Partial("NewsList",Model);
+   @Html.Partial("NewsList",Model)
+
 
 </section>
 
