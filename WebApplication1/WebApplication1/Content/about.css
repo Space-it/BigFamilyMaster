@@ -102,16 +102,14 @@ header:after {
 /* line 92, ../sass/_grids.scss */
 .who_we_are h2 {
   text-align: center;
-  color: #fff;
+  color: #eac51e;
   font-family: "RobotoCondensedRegular";
   font-size: 3em;
   margin-bottom: 0;
 }
 
 /* line 100, ../sass/_grids.scss */
-.who_we_are h2 span {
-  color: #eac51e;
-}
+
 
 /* line 103, ../sass/_grids.scss */
 .who_we_are p {

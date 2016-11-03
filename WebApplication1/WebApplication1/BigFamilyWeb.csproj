@@ -191,17 +191,12 @@
     <Content Include="Content\images\about_640bg.jpg" />
     <Content Include="Content\images\about_bg.jpg" />
     <Content Include="Content\images\admin-bg.jpg" />
-    <Content Include="Content\images\ais.png" />
-    <Content Include="Content\images\aristokrat.png" />
     <Content Include="Content\images\arrow_left.png" />
     <Content Include="Content\images\arrow_right.png" />
-    <Content Include="Content\images\ccc.jpg" />
     <Content Include="Content\images\circle.png" />
-    <Content Include="Content\images\decoration.png" />
     <Content Include="Content\images\email.png" />
     <Content Include="Content\images\footer_bg.jpg" />
     <Content Include="Content\images\graf.png" />
-    <Content Include="Content\images\HR.jpg" />
     <Content Include="Content\images\index_bg.jpg" />
     <Content Include="Content\images\lamp.png" />
     <Content Include="Content\images\lamp_green_.png" />
