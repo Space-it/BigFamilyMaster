@@ -15,8 +15,13 @@ namespace BigFamilyWeb.Controllers
         {
             return View();
         }
+        
+        public ActionResult Dashboard()
+        {
+            return View();
+        }
         [HttpPost]
-        public ActionResult Index(LoginModel model)
+        public ActionResult Dashboard(LoginModel model)
         {
             if (model.Username != null && model.Password != null)
             {
@@ -29,10 +34,6 @@ namespace BigFamilyWeb.Controllers
                     FormsAuthentication.RedirectFromLoginPage(log, false);
                 }
             }
-            return View();
-        }
-        public ActionResult Dashboard()
-        {
             return View();
         }
     }

@@ -1,13 +1,13 @@
 @font-face {
   font-family: "RobotoCondensedRegular";
-  src: url("../fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot");
-  src: url("../fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensedRegular/RobotoCondensedRegular.woff") format("woff"), url("../fonts/RobotoCondensedRegular/RobotoCondensedRegular.ttf") format("truetype");
+  src: url("/Content/fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot");
+  src: url("/Content/fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot?#iefix") format("embedded-opentype"), url("/Content/fonts/RobotoCondensedRegular/RobotoCondensedRegular.woff") format("woff"), url("/Content/fonts/RobotoCondensedRegular/RobotoCondensedRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "Lobster";
-  src: url("../fonts/Lobster.ttf");
+  src: url("/Content/fonts/Lobster.ttf");
   font-style: normal;
   font-weight: normal;
 }
@@ -23,7 +23,7 @@ header {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: url(../images/partners_bg.jpg);
+  background: url(/Content/images/partners_bg.jpg);
   padding-bottom: 80px;
   background-size: cover;
 }
@@ -310,7 +310,7 @@ header:after {
 @media screen and (max-width: 640px) {
   /* line 260, ../sass/_grids.scss */
   header {
-    background: url(../images/partners_640bg.jpg);
+    background: url(/Content/images/partners_640bg.jpg);
     background-size: cover;
   }
 

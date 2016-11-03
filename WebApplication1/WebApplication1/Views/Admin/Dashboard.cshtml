@@ -1,11 +1,30 @@
-﻿@{
-    ViewBag.Title = "Dashboard";
-    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+﻿
+@{
+    Layout = "";
 }
+@model BigFamilyWeb.Models.LoginModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/Content/style-form.css" media="screen" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
 
+<body>
 
-<div class="flex-container-center">
-    <h1>Панель управления Big Family</h1>
-    <p>Выше расположено меню для навигации по панели управления.</p>
-</div>
-
+    <div id="login-form">
+        <h1>АВТОРИЗАЦИЯ</h1>
+        @using (Html.BeginForm("Index", "Admin", FormMethod.Post))
+        {
+            <fieldset>
+                <form action="javascript:void(0);" method="get">
+                    @Html.EditorFor(model => model.Username, new { @class = "", @required = "true", @placeholder = "Логин" })
+                    @Html.PasswordFor(model => model.Password, new { @class = "", @required = "true", @placeholder = "Пароль" })
+                    <input type="submit" value="ВОЙТИ">
+                </form>
+            </fieldset>
+        }
+    </div>
+</body>
+</html>
