@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model Contact
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -12,12 +13,15 @@
         <footer>
             <div class="communications">
                 <p>Быстрая связь</p>
-                <form action="">
-                    <input type="text" placeholder="Имя" class="min_input" required="true">
-                    <input type="email" placeholder="Электронная почта" class="min_input" required="true">
-                    <textarea name="" id="" cols="30" rows="10" class="message" placeholder="Сообщение" required="true"></textarea>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "min_input", @placeholder = "Имя", @required="true" } })
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "min_input", @placeholder = "Электронная почта", @required = "true", @type = "email" } })
+                    @Html.TextAreaFor(model=>model.Adress2, new { @class = "message", @placeholder = "Сообщение", @required = "true", @type = "email", @cols = "30", @rows = "10" })
                     <input type="submit" value="Отправить" class="comm_button">
-                </form>
+                }
             </div>
             <div id="contacts">
                 <p class="cont_name">Контакты</p>

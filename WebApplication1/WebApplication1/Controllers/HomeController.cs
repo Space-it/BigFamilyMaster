@@ -14,6 +14,13 @@ namespace BigFamilyWeb.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Index(Contact model)
+        {
+            db.Contacts.Add(model);
+            db.SaveChanges();
+            return View();
+        }
         public ActionResult About()
         {
             return View();
