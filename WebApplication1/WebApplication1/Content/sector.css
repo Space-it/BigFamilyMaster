@@ -179,7 +179,7 @@ header:after {
 }
 
 /* line 140, ../sass/_grids.scss */
-.sector .sector_text button {
+.sector .sector_text a button {
   margin-left: 25.38462%;
   width: 49.23077%;
   float: left;
