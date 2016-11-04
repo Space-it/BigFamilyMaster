@@ -1,5 +1,4 @@
-﻿@model Contact
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -13,15 +12,18 @@
         <footer>
             <div class="communications">
                 <p>Быстрая связь</p>
-                @using (Html.BeginForm())
-                {
-                    @Html.AntiForgeryToken()
 
-                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "min_input", @placeholder = "Имя", @required="true" } })
-                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "min_input", @placeholder = "Электронная почта", @required = "true", @type = "email" } })
-                    @Html.TextAreaFor(model=>model.Adress2, new { @class = "message", @placeholder = "Сообщение", @required = "true", @type = "email", @cols = "30", @rows = "10" })
-                    <input type="submit" value="Отправить" class="comm_button">
-                }
+                    @using (Ajax.BeginForm("Index", new AjaxOptions { UpdateTargetId = "results" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <input type="text" name="FirstName" placeholder="Имя" class="min_input" required="true">
+                        <input type="email" name="Email" placeholder="Электронная почта" class="min_input" required="true">
+
+                        <textarea name="Adress2" id="" cols="30" rows="10" class="message" placeholder="Сообщение" required="true"></textarea>
+                        <input type="submit" value="Отправить" class="comm_button">
+                        <span id="results"></span>
+
+                    }
             </div>
             <div id="contacts">
                 <p class="cont_name">Контакты</p>
@@ -44,21 +46,21 @@
                 <p class="consultation">Консультация</p>
                 <ul>
                     <li>
-                        <a href="imdex.html">Главная</a>
+                        @Html.ActionLink("Главная", "Index", "Home")
                     </li>
                     <li>
-                        <a href="about.html">О нас</a>
+                        @Html.ActionLink("О нас", "About", "Home")
                     </li>
                     <li>
-                        <a href="services.html">Услуги</a>
+                        @Html.ActionLink("Услуги", "Services", "Home")
                     </li>
                     <li>
-                        <a href="news.html">Новости</a>
+                        @Html.ActionLink("Новости", "News", "Home")
                     </li>
                     <li>
-                        <a href="partners.html">Партнеры</a>
+                        @Html.ActionLink("Партнеры", "Partners", "Home")
                     </li>
-                    <li>
+                    <li class="click">
                         <a href="#contacts">Контакты</a>
                     </li>
                 </ul>

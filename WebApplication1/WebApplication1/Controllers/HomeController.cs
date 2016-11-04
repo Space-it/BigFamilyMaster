@@ -15,13 +15,25 @@ namespace BigFamilyWeb.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(Contact model)
+        [ValidateAntiForgeryToken]
+        public ActionResult Index(Contact contact)
         {
-            db.Contacts.Add(model);
-            db.SaveChanges();
-            return View();
+            contact.Adress1 = "Не указано";
+            contact.Company = "Не указано";
+            contact.IsNew = true;
+            contact.LastName = "Не указано";
+            contact.Phone1 = "Не указано";
+            contact.Phone2 = "Не указано";
+            contact.Surname = "Не указано";
+            if (ModelState.IsValid)
+            {
+                db.Contacts.Add(contact);
+                db.SaveChanges();
+                return PartialView("SendStatus", "Отправлено!");
+            }
+            return PartialView("SendStatus", "Не отправлено!");
         }
-        public ActionResult About()
+    public ActionResult About()
         {
             return View();
         }
