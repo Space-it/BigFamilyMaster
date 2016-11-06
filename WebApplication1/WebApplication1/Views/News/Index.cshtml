@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/Admin_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Управление новостями</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -36,9 +36,9 @@
             @Html.DisplayFor(modelItem => item.ImageURL)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.NewsId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.NewsId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.NewsId })
+            @Html.ActionLink("Изменить", "Edit", new { id=item.NewsId }) |
+            @Html.ActionLink("Детальнее", "Details", new { id=item.NewsId }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.NewsId })
         </td>
     </tr>
 }

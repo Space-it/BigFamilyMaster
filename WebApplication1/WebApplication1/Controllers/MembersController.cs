@@ -46,8 +46,22 @@ namespace BigFamilyWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MemberId,Description,ImageURL")] Member member)
+        public ActionResult Create([Bind(Include = "MemberId,Description,ImageURL,Title")] Member member, HttpPostedFileBase ImageUpload)
         {
+            if (ImageUpload != null)
+            {
+                if (System.IO.File.Exists(Server.MapPath("~/" + member.ImageURL)))
+                    System.IO.File.Delete(Server.MapPath("~/" + member.ImageURL));
+                // получаем имя файла
+                string fileName = System.IO.Path.GetFileName(ImageUpload.FileName);
+                // сохраняем файл в папку Files в проекте
+                ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\partnersImages\\" + fileName);
+                member.ImageURL = "/Content/partnersImages/" + fileName;
+            }
+            else
+            {
+                member.ImageURL = "/Content/partnersImages/";
+            }
             if (ModelState.IsValid)
             {
                 db.Members.Add(member);
@@ -78,8 +92,19 @@ namespace BigFamilyWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MemberId,Description,ImageURL")] Member member)
+        public ActionResult Edit([Bind(Include = "MemberId,Description,ImageURL,Title")] Member member, HttpPostedFileBase ImageUpload)
         {
+            if (ImageUpload != null)
+            {
+                if (System.IO.File.Exists(Server.MapPath("~/" + member.ImageURL)))
+                    System.IO.File.Delete(Server.MapPath("~/" + member.ImageURL));
+                // получаем имя файла
+                string fileName = System.IO.Path.GetFileName(ImageUpload.FileName);
+                // сохраняем файл в папку Files в проекте
+                ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\partnersImages\\" + fileName);
+                member.ImageURL = "/Content/partnersImages/" + fileName;
+            }
+
             if (ModelState.IsValid)
             {
                 db.Entry(member).State = EntityState.Modified;

@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Member>
 @{
     ViewBag.Title = "Partners";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -45,23 +45,6 @@
 
 
 <section class="partners">
-    <div class="one_partner">
-        <img src="/Content/images/aristokrat.png" alt="aristokrat">
-    </div>
-    <div class="one_partner">
-        <img src="/Content/images/ais.png" alt="aristokrat">
-    </div>
-    <div class="one_partner">
-        <img src="/Content/images/ccc.jpg" alt="aristokrat">
-    </div>
-    <div class="one_partner">
-        <img src="/Content/images/ais.png" alt="aristokrat">
-    </div>
-    <div class="one_partner">
-        <img src="/Content/images/aristokrat.png" alt="aristokrat">
-    </div>
-    <div class="one_partner">
-        <img src="/Content/images/ccc.jpg" alt="aristokrat">
-    </div>
+    @Html.Partial("PartnersList",Model)
 </section>
 

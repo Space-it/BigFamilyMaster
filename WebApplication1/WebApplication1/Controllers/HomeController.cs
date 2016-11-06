@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 
@@ -27,6 +29,14 @@ namespace BigFamilyWeb.Controllers
             contact.Surname = "Не указано";
             if (ModelState.IsValid)
             {
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new NetworkCredential("Bigfamilyzp@gmail.com", "halepa159753");
+                smtp.EnableSsl = true;
+
+                MailMessage emailMes = new MailMessage("Bigfamilyzp@gmail.com", "maxim.tis96@gmail.com","Новый контакт --> BigFamily", "BigFamily: Новый запрос в контактах!\n\n " + contact.FirstName+ " \n" +contact.Email);
+                smtp.Send(emailMes);
+
                 db.Contacts.Add(contact);
                 db.SaveChanges();
                 return PartialView("SendStatus", "Отправлено!");
@@ -63,7 +73,15 @@ namespace BigFamilyWeb.Controllers
         }
         public ActionResult Partners()
         {
-            return View();
+            return View(db.Members.ToList());
+        }
+        public ActionResult Phone()
+        {
+            return View(new Phone() {  Id=1, Phone1="2"});
+        }
+        public ActionResult Email()
+        {
+            return View(new Email() { Id = 1,Email1="fa@cd.com" });
         }
 
     }

@@ -5,14 +5,14 @@
     Layout = "~/Views/Shared/Admin_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2>Создать сектор</h2>
 
 @using (Html.BeginForm("Create", "Sectors", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Sector</h4>
+        <h4>Сектор</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -117,5 +117,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Назад к списку", "Index")
 </div>

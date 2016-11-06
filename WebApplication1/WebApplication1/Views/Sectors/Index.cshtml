@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/Admin_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Управление секторами</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Создать сектор", "Create")
 </p>
 <table class="table">
     <tr>
@@ -86,9 +86,9 @@
             @Html.DisplayFor(modelItem => item.LampColor)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SectorId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SectorId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SectorId })
+            @Html.ActionLink("Изменить", "Edit", new { id=item.SectorId }) |
+            @Html.ActionLink("Детельнее", "Details", new { id=item.SectorId }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.SectorId })
         </td>
     </tr>
 }

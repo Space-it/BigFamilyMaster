@@ -10,18 +10,13 @@ namespace BigFamilyWeb.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admin
         public ActionResult Index()
         {
             return View();
         }
-        
-        public ActionResult Dashboard()
-        {
-            return View();
-        }
+        // GET: Admin
         [HttpPost]
-        public ActionResult Dashboard(LoginModel model)
+        public ActionResult Index(LoginModel model)
         {
             if (model.Username != null && model.Password != null)
             {
@@ -34,6 +29,11 @@ namespace BigFamilyWeb.Controllers
                     FormsAuthentication.RedirectFromLoginPage(log, false);
                 }
             }
+            return View();
+        }
+        
+        public ActionResult Dashboard()
+        {
             return View();
         }
     }

@@ -1,0 +1,11 @@
+﻿@model IEnumerable<BigFamilyWeb.Member>
+@foreach (var item in Model)
+{
+    <div class="one_partner">
+        <a href="@Html.DisplayFor(modelItem => item.Description)">
+        <img src="@Html.DisplayFor(modelItem => item.ImageURL)" title="@Html.DisplayFor(modelItem => item.Title)" alt="@Html.DisplayFor(modelItem => item.Title)">
+        </a>
+        
+    </div>            
+}
+

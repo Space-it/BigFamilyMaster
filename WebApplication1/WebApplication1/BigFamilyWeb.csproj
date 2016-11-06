@@ -165,6 +165,7 @@
     <Compile Include="Member.cs">
       <DependentUpon>familydb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EmailModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="News.cs">
       <DependentUpon>familydb.tt</DependentUpon>
@@ -327,11 +328,15 @@
     <Content Include="Views\Home\Sector.cshtml" />
     <Content Include="Views\Home\NewsList.cshtml" />
     <Content Include="Views\Home\SendStatus.cshtml" />
+    <Content Include="Views\Home\PartnersList.cshtml" />
+    <Content Include="Views\Home\Phone.cshtml" />
+    <Content Include="Views\Home\Email.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\decorations\" />
     <Folder Include="Content\news\" />
+    <Folder Include="Content\partnersImages\" />
     <Folder Include="Content\prices\" />
     <Folder Include="Content\sectorBigImages\" />
     <Folder Include="Content\sectorMinImages\" />

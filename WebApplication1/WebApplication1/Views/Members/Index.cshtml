@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/Admin_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Управление партнерами</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -13,10 +13,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
+            Ссылка на партнера
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ImageURL)
+            Краткое описание партнера
+        </th>
+        <th>
+            Адресс картинки
         </th>
         <th></th>
     </tr>
@@ -27,12 +30,15 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.ImageURL)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MemberId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MemberId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MemberId })
+            @Html.ActionLink("Изменить", "Edit", new { id=item.MemberId }) |
+            @Html.ActionLink("Детальнее", "Details", new { id=item.MemberId }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.MemberId })
         </td>
     </tr>
 }
