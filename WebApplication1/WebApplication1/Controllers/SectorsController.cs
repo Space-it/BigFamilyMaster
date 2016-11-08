@@ -66,6 +66,7 @@ namespace BigFamilyWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "Name,Description,ImageURL,ImaeMobileURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor,DecorationURL")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload, HttpPostedFileBase ImageMobileUpload, HttpPostedFileBase ImageDecorationUpload)
         {
             sector.MinImageUrl = "";
@@ -118,6 +119,7 @@ namespace BigFamilyWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "Name,Description,ImageURL,ImageMobileURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor,DecorationURL")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload, HttpPostedFileBase ImageMobileUpload, HttpPostedFileBase ImageDecorationUpload)
         {
             if (MinUpload != null)
