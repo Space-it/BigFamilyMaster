@@ -34,7 +34,7 @@ namespace BigFamilyWeb.Controllers
                 smtp.Credentials = new NetworkCredential("Bigfamilyzp@gmail.com", "halepa159753");
                 smtp.EnableSsl = true;
 
-                MailMessage emailMes = new MailMessage("Bigfamilyzp@gmail.com", "Halepaas@gmail.com", "Новый контакт --> BigFamily", "BigFamily: Новый запрос в контактах!\n\n " + contact.FirstName+ " \n" +contact.Email);
+                MailMessage emailMes = new MailMessage("Bigfamilyzp@gmail.com", "Halepaas@gmail.com", "Новый контакт --> BigFamily", "BigFamily: Новый запрос в контактах!\n\n " + contact.FirstName+ " \n" +contact.Email+ "\n Сообщение: " + contact.Adress2);
                 smtp.Send(emailMes);
 
                 db.Contacts.Add(contact);

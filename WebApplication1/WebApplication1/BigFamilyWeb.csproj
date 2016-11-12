@@ -313,11 +313,11 @@
     <Content Include="Views\News\Details.cshtml" />
     <Content Include="Views\News\Edit.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
-    <Content Include="Views\Members\Create.cshtml" />
-    <Content Include="Views\Members\Delete.cshtml" />
-    <Content Include="Views\Members\Details.cshtml" />
-    <Content Include="Views\Members\Edit.cshtml" />
-    <Content Include="Views\Members\Index.cshtml" />
+    <Content Include="Views\Home\Members\Create.cshtml" />
+    <Content Include="Views\Home\Members\Delete.cshtml" />
+    <Content Include="Views\Home\Members\Details.cshtml" />
+    <Content Include="Views\Home\Members\Edit.cshtml" />
+    <Content Include="Views\Home\Members\Index.cshtml" />
     <Content Include="Views\Contacts\Create.cshtml" />
     <Content Include="Views\Contacts\Delete.cshtml" />
     <Content Include="Views\Contacts\Details.cshtml" />

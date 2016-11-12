@@ -1,7 +1,8 @@
 ﻿@model BigFamilyWeb.Sector
 
 @{
-    ViewBag.Title = "Sector";
+    ViewBag.Title ="Сектор "+   Model.MinTitle + " участник BigFamily - Сделай свое заведение лучше!";
+    ViewBag.Meta = "Сектор " + Model.MinTitle + " - " + Model.Description.Substring(0, 250);
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @Styles.Render("~/Content/sector_css")
