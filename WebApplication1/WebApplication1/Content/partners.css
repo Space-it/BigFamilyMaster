@@ -142,6 +142,7 @@ header:after {
   float: left;
   margin-right: 0.91743%;
   margin-bottom: 10px;
+  min-height:200px;
 }
 
 /* line 125, ../sass/_grids.scss */
