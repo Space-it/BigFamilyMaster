@@ -67,9 +67,11 @@ namespace BigFamilyWeb.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Create([Bind(Include = "Name,Description,ImageURL,ImaeMobileURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor,DecorationURL")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload, HttpPostedFileBase ImageMobileUpload, HttpPostedFileBase ImageDecorationUpload)
+        public ActionResult Create([Bind(Include = "SectorId,Name,Description,ImageURL,ImaeMobileURL,PriceURL,MinImageUrl,MinTitle,LampColor,DecorationURL")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload, HttpPostedFileBase ImageMobileUpload, HttpPostedFileBase ImageDecorationUpload)
         {
-            sector.MinImageUrl = "";
+            sector.Contacts = "AAAAAAAAAA";
+            sector.MinKeywords = "BBBBBBBBBBB";
+            sector.MinImageUrl = "CCCCCCCCCCC";
             if (MinUpload != null)
                 ProcessUpload(sector, MinUpload, "MinImageUrl", "sectorMinImages");
 
@@ -120,8 +122,10 @@ namespace BigFamilyWeb.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Edit([Bind(Include = "Name,Description,ImageURL,ImageMobileURL,Contacts,SectorId,PriceURL,MinImageUrl,MinTitle,MinKeywords,LampColor,DecorationURL")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload, HttpPostedFileBase ImageMobileUpload, HttpPostedFileBase ImageDecorationUpload)
+        public ActionResult Edit([Bind(Include = "Name,Description,ImageURL,ImageMobileURL,SectorId,PriceURL,MinImageUrl,MinTitle,LampColor,DecorationURL")] Sector sector, HttpPostedFileBase MinUpload, HttpPostedFileBase PriceUpload, HttpPostedFileBase ImageUpload, HttpPostedFileBase ImageMobileUpload, HttpPostedFileBase ImageDecorationUpload)
         {
+            sector.Contacts = "";
+            sector.MinKeywords = "";
             if (MinUpload != null)
             {
                 if (System.IO.File.Exists(Server.MapPath("~/" + sector.MinImageUrl)))
@@ -170,7 +174,7 @@ namespace BigFamilyWeb.Controllers
                 // получаем имя файла
                 string fileName = System.IO.Path.GetFileName(PriceUpload.FileName);
                 // сохраняем файл в папку Files в проекте
-                ImageUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\prices\\" + fileName);
+                PriceUpload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\prices\\" + fileName);
                 sector.PriceURL = "/Content/prices/" + fileName;
             }
             if (ModelState.IsValid)

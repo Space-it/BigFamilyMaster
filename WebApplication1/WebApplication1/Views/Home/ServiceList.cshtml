@@ -6,9 +6,9 @@
     <div class="sector" style="background: url('@Html.DisplayFor(Modelitem => Model[i].MinImageUrl)');background-size:cover;">
         <img src="/Content/images/lamp_@Html.DisplayFor(Modelitem => Model[i].LampColor)_.png" alt="lamp_@Html.DisplayFor(Modelitem => Model[i].LampColor)" class="sector_lamp">
         <h2>@Html.DisplayFor(Modelitem => Model[i].MinTitle)</h2>
-        <p>
+        @*<p>
             @Html.DisplayFor(Modelitem => Model[i].MinKeywords)
-        </p>
+        </p>*@
         <a href="/Home/Sector/@i"><button>Подробнее</button></a>
     </div>
 

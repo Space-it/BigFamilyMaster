@@ -12,84 +12,47 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ImageURL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Contacts)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PriceURL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MinImageUrl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ImageMobileURL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DecorationURL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MinTitle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MinKeywords)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LampColor)
-        </th>
         <th></th>
+        <th>
+            Описание
+        </th>
+        <th>
+            Имя Сектора
+        </th>
+        
+        <th>
+            Минимальное описание(название в сетке)
+        </th>
+        <th>
+            Цвет лампочки (green,yellow,red)
+        </th>
+        
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.ActionLink("Изменить", "Edit", new { id = item.SectorId }) |
+            @Html.ActionLink("Детельнее", "Details", new { id = item.SectorId }) |
+            @Html.ActionLink("Удалить", "Delete", new { id = item.SectorId })
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Description)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ImageURL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Contacts)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PriceURL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MinImageUrl)
-        </td>
-
-        <td>
-            @Html.DisplayFor(modelItem => item.ImageMobileURL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DecorationURL)
-        </td>
 
         <td>
             @Html.DisplayFor(modelItem => item.MinTitle)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.MinKeywords)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.LampColor)
         </td>
-        <td>
-            @Html.ActionLink("Изменить", "Edit", new { id=item.SectorId }) |
-            @Html.ActionLink("Детельнее", "Details", new { id=item.SectorId }) |
-            @Html.ActionLink("Удалить", "Delete", new { id=item.SectorId })
-        </td>
+        
     </tr>
 }
 
